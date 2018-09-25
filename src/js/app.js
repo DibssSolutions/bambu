@@ -3,3 +3,7 @@ svg4everybody();
 
 import './components/_video';
 import './components/_slider';
+import './components/_menu-toggle';
+import './components/_form-validation';
+import './components/_mask';
+import './components/_map';
