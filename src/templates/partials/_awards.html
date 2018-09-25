@@ -1,0 +1,44 @@
+{% set awards = [
+    {
+        "image": "tripadvisor",
+        "text": "Лучший ресторан 2017 по мнению Tripadvisor"
+    },
+    {
+        "image": "best",
+        "text": "Лучший ресторан по мнению критиков за 2017-2018 год"
+    },
+    {
+        "image": "first",
+        "text": "Первое место по сервису обслуживания"
+    },
+    {
+        "image": "winner",
+        "text": "Лучший паназиатский ресторан Москвы 2017 "
+    },
+    {
+        "image": "first-verand",
+        "text": "Лучшая веранда Москва-Сити 2018"
+    }
+] %}
+
+<section class="awards">
+    <div class="awards__container container-inner">
+        <h3 class="awards__title title">
+            <span>Награды</span>
+        </h3>
+        <div class="awards__items">
+            {% for item in awards %}
+                <div class="item">
+                    <div class="item__image">
+                        {{mixins.icon(item.image)}}
+                    </div>
+                    <div class="item__text">
+                        {{item.text | safe}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+</div>
+</section>

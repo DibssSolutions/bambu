@@ -1,0 +1,171 @@
+// ===== HERO FORM =====
+
+.calculate
+    &__field
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin: 0 -15px 32px
+        text-align: center
+        position: relative
+        +sm 
+            flex-flow: column
+            margin: 20px 0
+            padding: 0 15px
+    &__input-group
+        flex-grow: 1
+        position: relative
+        margin: 0 15px
+        position: relative
+        border: 3px solid $grey
+        background-color: $white
+        +sm 
+            margin-bottom: 16px
+    &__icon
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 12px
+        font-size: 0
+        .icon
+            font-size: 14px
+            color: $grey
+            +icenter
+    &__input
+        display: block
+        width: 100%
+        background-color: transparent !important
+        font-size: 14px
+        font-weight: 400
+        font-style: italic
+        padding-left: 34px
+        font-family: $astra
+        height: 43px
+        &::placeholder
+            background-color: inherit
+            font-size: inherit
+            font-weight: inherit
+            line-height: inherit
+            color: inherit
+        &:focus
+            border-bottom-color: rgba(#fff, 0.7)
+            &::placeholder
+                font-size: 0
+        &.error
+            color: rgba(#fff, 0.7)
+        +sm 
+            border-bottom-width: 1px
+    // label.error
+    //     top: 100%
+    //     left: 0
+    //     padding: 2px 28px 0 0 
+
+    &__submit
+        display: inline-block
+        height: 45px
+        line-height: 45px
+        font-size: 16px
+        min-width: 306px
+        text-align: center
+        color: $black
+        line-height: 1.83
+        text-align: center
+        background-color: $green
+        text-transform: uppercase
+        border: 1px solid darken($green, 40%)
+        &:disabled
+            cursor: default
+        &.disabled 
+            opacity: 0.5
+        +md 
+            font-size: 16px
+            padding: 16px 50px
+        +sm 
+            font-size: 14px
+            padding: 14px 0
+            width: 100% 
+    
+    
+// ===== CONTACTS FORM =====
+
+// .order
+//     text-align: center
+//     &__label
+//         position: relative
+//         display: inline-block
+//         min-width: 270px
+//         margin: 16px 16px 0
+//         text-align: center
+//         border: solid 1px $grey
+//         border-radius: 23px
+//         padding: 11px 23px
+//         +sm 
+//             margin-bottom: 6px
+//     &__input-icon
+//         margin-right: 10px
+//         display: inline-block
+//         .icon
+//             font-size: 0.8em
+//             color: $grey
+//     &__input    
+//         display: inline-block
+//         font-size: 14px
+//         font-weight: 300
+//         line-height: 1.21
+//         color: #666666
+//         +text-overflow
+//         width: 45%
+//         &:focus
+//             &::placeholder
+//                 font-size: 0
+//         &.error
+//             color: rgba(#666666, 0.7)
+//         &--long 
+//             width: 70%
+//         &::placeholder
+//             font-size: inherit
+//             font-weight:inherit
+//             line-height: inherit
+//             color: inherit
+//     &__submit
+//         display: inline-block
+//         padding: 14px 0
+//         font-size: 16px
+//         line-height: 1.31
+//         color: #ffffff
+//         background-color: $red
+//         min-width: 270px
+//         border-radius: 23px
+//         text-align: center
+//         text-transform: uppercase
+//         margin: 16px 16px 0
+//         &:disabled
+//             cursor: default
+//         &.disabled 
+//             opacity: 0.5
+//     label.error
+//         position: absolute
+//         top: 100%
+//         left: 15px
+//         // +sm 
+//         //     display: block
+//         //     width: 100%
+//         //     margin: 16px 0 0
+
+
+
+// // input.error
+// //     color: rgba(#fff, 0.7)
+
+// label.error
+//     position: absolute
+//     color: red
+//     font-size: 12px
+//     text-align: left
+
+// input:-webkit-autofill 
+//     -webkit-box-shadow: 0 0 0 30px white inset
+
+// input:-webkit-autofill 
+//     -webkit-text-fill-color: #fff !important
+

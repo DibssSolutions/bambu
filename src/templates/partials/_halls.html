@@ -1,0 +1,58 @@
+{% set halls = [
+    {
+        image: 'first_floor.jpg',
+        title: '1 этаж ',
+        square: '220 м²',
+        seats: 'до 100 человек',
+        descr: 'Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон.',
+        link: 'Просмотреть схему зала'
+    },
+    {
+        image: 'second_floor.jpg',
+        title: '2 этаж ',
+        square: '120 м²',
+        seats: 'до 60 человек',
+        descr: 'Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон.',
+        link: 'Просмотреть схему зала'
+    },
+    {
+        image: 'veranda.jpg',
+        title: 'веранда ',
+        square: '450 м²',
+        seats: 'до 200 человек',
+        descr: 'Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон.',
+        link: 'Просмотреть схему зала'
+    },
+    {
+        image: 'caraoke.jpg',
+        title: 'караоке',
+        square: '100 м²',
+        seats: 'до 50 человек',
+        descr: 'Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон.',
+        link: 'Просмотреть схему зала'
+    }
+] %}
+
+<section class="halls">
+    <div class="halls__container container-inner">
+        <h3 class="halls__title title">
+            <span>ЗАЛЫ РЕСТОРАНА</span>
+        </h3>
+        <div class="halls__halls">
+            {% for item in halls %}
+                <div class="hall">
+                    <a href="#" class="hall__image" style='background-image: url(img/{{item.image}});'></a>
+                    <h4 class="hall__title">{{item.title}}</h4>
+                    <div class="hall__props">
+                        <b>Площадь: </b>{{item.square}}
+                        <b>Вместимость: </b>{{item.seats}}
+                    </div>
+                    <div class="hall__descr">
+                        {{item.descr | safe}}
+                    </div>
+                    <a href="#" class="hall__link">{{item.link}}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

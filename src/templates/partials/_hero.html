@@ -1,0 +1,40 @@
+<div class="hero">
+    <div class="hero__video js-video" data-vide-bg="mp4: video/about, poster: video/poster" data-vide-options="posterType: jpg, loop: true, playsinline: true">
+    </div>
+    <div class="hero__container">
+        <div class="hero__text">
+            <!-- TITLE -->
+            <h2 class="hero__title">Лучший ресторан для банкета в Москва Сити </h2>
+            <h1 class="hero__name">bamboo.bar!</h1>
+            <!-- FORM  -->
+            <div class="hero__form">
+                <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
+                    <div class="calculate__field">
+                        <div class="calculate__input-group">
+                            <span class="calculate__icon">
+                                {{mixins.icon('user')}}
+                            </span>
+                            <input type="text" class="calculate__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
+                        </div>
+                        <div class="calculate__input-group">
+                            <span class="calculate__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="calculate__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off"
+                            />
+                        </div>
+                        <div class="calculate__input-group">
+                            <span class="calculate__icon">
+                                {{mixins.icon('users')}}
+                            </span>
+                            <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="calculate__button-wrapper">
+                        <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header js-header">
+        <div class="container-inner header__container">
+          <div class="header__logo">
+            <a href="index.html" class="logo">
+              <img src="img/logo.png" alt="main-logo" />
+            </a>
+          </div>
+          <nav class="nav js-nav" role="navigation">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">1 этаж (10-100 персон)</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">2 этаж (10-60 персон)</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">караоке (10-50 персон)</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Веранда (10-200 персон)</a>
+              </li>
+              <li class="nav__item">
+                <a href="tel:+74956425962" class="nav__phone">+7 (495) 642-59-62</a>
+                <a href="mailto:banket@bamboobar.su" class="nav__email">banket@bamboobar.su</a>
+                <ul class="lang">
+                  <li class="lang__item"><a class="lang__link" href="#">RU</a></li>
+                  <li class="lang__item"><a class="lang__link" href="#">EN</a></li>
+                  <li class="lang__item"><a class="lang__link" href="#">CHN</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="toggle-button js-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </header>
+      <div class="hero">
+        <div class="hero__video js-video" data-vide-bg="mp4: video/about, poster: video/poster" data-vide-options="posterType: jpg, loop: true, playsinline: true">
+        </div>
+        <div class="hero__container">
+          <div class="hero__text">
+            <!-- TITLE -->
+            <h2 class="hero__title">Лучший ресторан для банкета в Москва Сити </h2>
+            <h1 class="hero__name">bamboo.bar!</h1>
+            <!-- FORM  -->
+            <div class="hero__form">
+              <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
+                <div class="calculate__field">
+                  <div class="calculate__input-group">
+                    <span class="calculate__icon">
+                      <svg class="icon icon-user">
+                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="calculate__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
+                  </div>
+                  <div class="calculate__input-group">
+                    <span class="calculate__icon">
+                      <svg class="icon icon-call-answer">
+                        <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="calculate__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off" />
+                  </div>
+                  <div class="calculate__input-group">
+                    <span class="calculate__icon">
+                      <svg class="icon icon-users">
+                        <use xlink:href="img/sprite.svg#icon-users"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="calculate__button-wrapper">
+                  <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="advantages">
+        <div class="advantages__container container-inner">
+          <h3 class="advantages__title title">
+            <span>ПРЕИМУЩЕСТВА для наших гостей</span>
+          </h3>
+          <div class="advantages__items">
+            <div class="item">
+              <div class="item__image">
+                <svg class="icon icon-discount">
+                  <use xlink:href="img/sprite.svg#icon-discount"></use>
+                </svg>
+              </div>
+              <div class="item__text"> Скидка на заказ банкета <br>от 10 персон - 10% </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <svg class="icon icon-menu">
+                  <use xlink:href="img/sprite.svg#icon-menu"></use>
+                </svg>
+              </div>
+              <div class="item__text"> Специальное <br> банкетное меню </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <svg class="icon icon-champagne">
+                  <use xlink:href="img/sprite.svg#icon-champagne"></use>
+                </svg>
+              </div>
+              <div class="item__text"> Бутылка Moet Chandon или <br> Торт в ПОДАРОК! </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <svg class="icon icon-barman">
+                  <use xlink:href="img/sprite.svg#icon-barman"></use>
+                </svg>
+              </div>
+              <div class="item__text"> Профессиональные ведущие, вокалисты и музыканты </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <svg class="icon icon-karaoke">
+                  <use xlink:href="img/sprite.svg#icon-karaoke"></use>
+                </svg>
+              </div>
+              <div class="item__text"> Использование звукового и видео‑оборудования. </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </section>
+    <section class="halls">
+      <div class="halls__container container-inner">
+        <h3 class="halls__title title">
+          <span>ЗАЛЫ РЕСТОРАНА</span>
+        </h3>
+        <div class="halls__halls">
+          <div class="hall">
+            <a href="#" class="hall__image" style='background-image: url(img/first_floor.jpg);'></a>
+            <h4 class="hall__title">1 этаж </h4>
+            <div class="hall__props">
+              <b>Площадь: </b>220 м² <b>Вместимость: </b>до 100 человек </div>
+            <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
+            <a href="#" class="hall__link">Просмотреть схему зала</a>
+          </div>
+          <div class="hall">
+            <a href="#" class="hall__image" style='background-image: url(img/second_floor.jpg);'></a>
+            <h4 class="hall__title">2 этаж </h4>
+            <div class="hall__props">
+              <b>Площадь: </b>120 м² <b>Вместимость: </b>до 60 человек </div>
+            <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
+            <a href="#" class="hall__link">Просмотреть схему зала</a>
+          </div>
+          <div class="hall">
+            <a href="#" class="hall__image" style='background-image: url(img/veranda.jpg);'></a>
+            <h4 class="hall__title">веранда </h4>
+            <div class="hall__props">
+              <b>Площадь: </b>450 м² <b>Вместимость: </b>до 200 человек </div>
+            <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
+            <a href="#" class="hall__link">Просмотреть схему зала</a>
+          </div>
+          <div class="hall">
+            <a href="#" class="hall__image" style='background-image: url(img/caraoke.jpg);'></a>
+            <h4 class="hall__title">караоке</h4>
+            <div class="hall__props">
+              <b>Площадь: </b>100 м² <b>Вместимость: </b>до 50 человек </div>
+            <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
+            <a href="#" class="hall__link">Просмотреть схему зала</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients">
+      <div class="clients__container container-inner">
+        <h3 class="clients__title title"> У НАС ОТМЕЧАЛИ СОБЫТИЯ </h3>
+        <div class="clients__logos js-clients-slider">
+          <a href="#" class="clients__logo">
+            <img src="img/client-1.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-2.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-3.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-1.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-2.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-3.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-1.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-2.png" alt="client1">
+          </a>
+          <a href="#" class="clients__logo">
+            <img src="img/client-3.png" alt="client1">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="discount" style='background-image: url(img/discount_bg.jpg);'>
+      <div class="discount__container container-inner">
+        <h4 class="discount__title">Оставьте заявку через данную форму и получите специальную скидку</h4>
+        <button class="btn-discount" type="button">Получить скидку до 20% на банкетное меню!</button>
+      </div>
+    </div>
+    <section class="awards">
+      <div class="awards__container container-inner">
+        <h3 class="awards__title title">
+          <span>Награды</span>
+        </h3>
+        <div class="awards__items">
+          <div class="item">
+            <div class="item__image">
+              <svg class="icon icon-tripadvisor">
+                <use xlink:href="img/sprite.svg#icon-tripadvisor"></use>
+              </svg>
+            </div>
+            <div class="item__text"> Лучший ресторан 2017 по мнению Tripadvisor </div>
+          </div>
+          <div class="item">
+            <div class="item__image">
+              <svg class="icon icon-best">
+                <use xlink:href="img/sprite.svg#icon-best"></use>
+              </svg>
+            </div>
+            <div class="item__text"> Лучший ресторан по мнению критиков за 2017-2018 год </div>
+          </div>
+          <div class="item">
+            <div class="item__image">
+              <svg class="icon icon-first">
+                <use xlink:href="img/sprite.svg#icon-first"></use>
+              </svg>
+            </div>
+            <div class="item__text"> Первое место по сервису обслуживания </div>
+          </div>
+          <div class="item">
+            <div class="item__image">
+              <svg class="icon icon-winner">
+                <use xlink:href="img/sprite.svg#icon-winner"></use>
+              </svg>
+            </div>
+            <div class="item__text"> Лучший паназиатский ресторан Москвы 2017 </div>
+          </div>
+          <div class="item">
+            <div class="item__image">
+              <svg class="icon icon-first-verand">
+                <use xlink:href="img/sprite.svg#icon-first-verand"></use>
+              </svg>
+            </div>
+            <div class="item__text"> Лучшая веранда Москва-Сити 2018 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </section>
+    <section class="dishes">
+      <h3 class="title">
+        <span>кухня</span>
+      </h3>
+      <div class="dishes__slider js-slider">
+        <div class="slide">
+          <div class="slide__image" style='background-image: url(img/slider_1.jpg);'></div>
+        </div>
+        <div class="slide">
+          <div class="slide__image" style='background-image: url(img/slider_2.jpg);'></div>
+        </div>
+        <div class="slide">
+          <div class="slide__image" style='background-image: url(img/slider_3.jpg);'></div>
+        </div>
+        <div class="slide">
+          <div class="slide__image" style='background-image: url(img/slider_4.jpg);'></div>
+        </div>
+        <div class="slide">
+          <div class="slide__image" style='background-image: url(img/slider_5.jpg);'></div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

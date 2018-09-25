@@ -1,0 +1,44 @@
+{% set advantages = [
+    {
+        "image": "discount",
+        "text": "Скидка на заказ банкета <br>от 10 персон - 10%"
+    },
+    {
+        "image": "menu",
+        "text": "Специальное <br> банкетное меню"
+    },
+    {
+        "image": "champagne",
+        "text": "Бутылка Moet Chandon или <br> Торт в ПОДАРОК!"
+    },
+    {
+        "image": "barman",
+        "text": "Профессиональные ведущие, вокалисты и музыканты "
+    },
+    {
+        "image": "karaoke",
+        "text": "Использование звукового и видео‑оборудования. "
+    }
+] %}
+
+<section class="advantages">
+    <div class="advantages__container container-inner">
+        <h3 class="advantages__title title">
+            <span>ПРЕИМУЩЕСТВА для наших гостей</span>
+        </h3>
+        <div class="advantages__items">
+            {% for item in advantages %}
+                <div class="item">
+                    <div class="item__image">
+                        {{mixins.icon(item.image)}}
+                    </div>
+                    <div class="item__text">
+                        {{item.text | safe}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+</div>
+</section>

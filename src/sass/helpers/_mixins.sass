@@ -275,3 +275,39 @@
   @if $letter-spacing != null
     letter-spacing: ($letter-spacing / 1000) + em
 
+=invis
+  opacity: 0
+  visibility: hidden
+  transition: opacity $tr, visibility $tr
+
+=vis
+  opacity: 1
+  visibility: visible 
+
+=circle($size)
+  height: $size + px
+  width: $size + px
+  border-radius: 50%
+
+=flex-beetween
+  display: flex
+  align-items: center
+  justify-content: space-between
+  
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=icenter
+  display: inline-block
+  vertical-align: middle
+
+=child($n) 
+  &:nth-child(#{$n})
+    background-color:rgb($n,$n,$n)
+
+=transition_delay($n)
+  @for $i from 1 through $n 
+    &:nth-child(#{$i}) 
+      transition: all 3.2s #{$i * 1}s ease-in
