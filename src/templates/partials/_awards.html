@@ -17,7 +17,7 @@
     },
     {
         "image": "first-verand",
-        "text": "Лучшая веранда Москва-Сити 2018"
+        "text": "Лучшая веранда <br> Москва-Сити 2018"
     }
 ] %}
 
@@ -28,7 +28,7 @@
         </h3>
         <div class="awards__items">
             {% for item in awards %}
-                <div class="item">
+                <div class="item item_smaller">
                     <div class="item__image">
                         {{mixins.icon(item.image)}}
                     </div>

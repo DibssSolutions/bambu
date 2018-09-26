@@ -1,7 +1,11 @@
-.advantages
-    margin: 30px auto
+.advantages 
+    margin: 66px auto 28px
+    +sm 
+        margin-top: 32px
     &__title
-        margin-bottom: 30px
+        margin-bottom: 74px
+        +sm 
+            margin-bottom: 32px
     &__items
         display: flex
         justify-content: center
@@ -18,8 +22,10 @@
         padding: 24px 10px 0
     &__image
         margin-bottom: 16px
+        .item_smaller &
+            margin-bottom: 11px
         .icon
-            font-size: 60px
+            font-size: 64px
             display: inline-block
     &__text
         font-weight: 700
@@ -31,10 +37,14 @@
         align-items: center
         justify-content: center
         flex-wrap: wrap
+        margin: 42px auto 72px
+        +sm 
+            margin: 32px auto
     &__logo
         +icenter
         filter: grayscale(100%) opacity(0.7)
         transition: filter $tr
+        padding: 0 24px 
         &:hover
             filter: grayscale(0) opacity(1)
         .slick-active &
@@ -54,6 +64,7 @@
     +cover
     position: relative
     text-align: center
+    padding: 35px 0
     &:after
         +coverdiv
         content: ''
@@ -65,26 +76,58 @@
         font-weight: 400
         position: relative
         z-index: 2
+        margin-bottom: 30px
+        +sm 
+            font-size: 16px
     .btn-discount
         position: relative
         z-index: 2
+
 
 .btn-discount
     display: inline-block
     text-align: center
     line-height: 1.75
     border: 2px solid $green
-    width: 390px
+    min-width: 390px
     padding: 12px 10px
     background-color: $white
     font-size: 16px
     font-family: $astra
     font-weight: 700
     word-spacing: 0.07em
+    +sm 
+        min-width: inherit
+        line-height: 1
+    
 
 .awards
+    margin: 86px auto 72px
+    +sm 
+        margin: 32px auto
+    &__title
+        margin-bottom: 60px
+        +sm 
+            margin-bottom: 16px
     &__items
         display: flex
         justify-content: center
         flex-wrap: wrap
         margin: -12px
+
+.dishes
+    margin: 40px auto 80px
+    +sm 
+        margin-bottom: 32px
+    &__title
+        margin-bottom: 31px
+
+
+
+.footer
+    text-align: center
+    padding-top: 38px
+    padding-bottom: 6px
+    &__copyright
+        margin-top: 16px
+    

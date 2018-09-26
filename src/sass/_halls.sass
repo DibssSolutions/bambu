@@ -1,21 +1,28 @@
 .halls
+    margin: 107px auto 21px
+    +sm 
+        margin: 32px auto
+    &__title
+        margin-bottom: 47px
     &__halls
-        +flex-center
+        display: flex
+        justify-content: center
         flex-wrap: wrap
         margin: 0 -15px
 .hall
     flex: 0 0 50%
     width: 50%
-    padding: 0 15px 30px
+    padding: 0 15px 46px
     text-align: center
     +sm     
         flex: 0 0 100%
         width: 100%
+        padding-bottom: 24px
     &__image
         display: block
         +cover
         padding-bottom: 314px
-        margin-bottom: 28px
+        margin-bottom: 26px
     &__title
         font-size: 20px
         font-weight: 700
@@ -25,11 +32,21 @@
     &__props
         font-size: 18px
         line-height: 1.17
+        margin-bottom: 9px
+    &__square
+        display: inline-block
+        margin-right: 5px
+        +md 
+            width: 100%
+    &__seats
+        display: inline-block
+        +sm 
+            width: 100%
     &__descr
         max-width: 480px
-        margin: 0 auto
-        line-height: 2
+        margin: 0 auto 7px
     &__link
         font-size: 16px
+        font-weight: 700
         color: $darkGreen
         border-bottom: 1px solid $darkGreen

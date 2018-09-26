@@ -6,8 +6,15 @@
 	// 	width: 200px
 	// 	height: 100px
 
+.contacts
+    margin: 24px 0 0
+    &__title
+        margin-bottom: 20px
+
 .map-wrapper
 	position: relative
+	border-bottom: 1px solid #cbcbcb
+	border-top: 1px solid #cbcbcb
 
 .reserve
 	position: absolute
@@ -17,11 +24,18 @@
 	background-color: $white
 	z-index: 5
 	padding: 38px
+	+lg 
+		right: calc(50% - 485px)
+	+md 
+		position: static
+		transform: none
 	&__adress,
 	&__phone,
 	&__time
 		padding-left: 22px
 		position: relative
+		letter-spacing: 0.04em
+		word-spacing: -0.05em
 	&__adress
 		padding-bottom: 15px
 	&__last
@@ -32,6 +46,8 @@
 		top: 2px
 		.icon
 			color: #999999
+			.reserve__time &
+				font-size: 17px
 		// .reserve__adress &
 		// 	top: 2px
 		// .reserve__phone &
@@ -39,11 +55,13 @@
 		// .reserve__time &
 		// 	top: 2px
 	&__form 
-		+flex-beetween
-		margin-top: 24px
+		display: flex
+		align-items: center
+		margin-top: 30px
+		flex-wrap: wrap
 	&__button
 		display: inline-block
-		width: 244px
+		width: 264px
 		padding: 15px
 		border: 2px solid #cccccc
 		line-height: 1.5
@@ -52,8 +70,16 @@
 		font-weight: 700
 		text-align: center
 		transition: border-color $tr
+		+lg 
+			width: 200px
+		+sm 
+			width: 100%
+			padding: 10px
 		&:first-child
 			margin-right: 24px
+			+sm 
+				margin-right: 0
+				margin-bottom: 16px
 		&:hover
 			border: 2px solid $green
 		&_highlighted
