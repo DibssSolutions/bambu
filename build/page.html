@@ -14,6 +14,9 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
+      <div class="js-success message-sending">Ваш запрос принят, ожидайте. Наш менеджер с вами свяжется в течении 15 минут. <button class="message-sending__x js-close">&#10006;</button>
+      </div>
+      <div class="js-error message-sending"></div>
       <header class="header js-header">
         <div class="container-inner header__container">
           <div class="header__logo">
@@ -35,7 +38,7 @@
               <li class="nav__item">
                 <a class="nav__link" href="#">Веранда (10-200 персон)</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item nav__item_contacts">
                 <a href="tel:+74956425962" class="nav__phone">+7 (495) 642-59-62</a>
                 <a href="mailto:banket@bamboobar.su" class="nav__email">banket@bamboobar.su</a>
                 <ul class="lang">
@@ -63,35 +66,35 @@
             <h1 class="hero__name">bamboo.bar!</h1>
             <!-- FORM  -->
             <div class="hero__form">
-              <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
-                <div class="calculate__field">
-                  <div class="calculate__input-group">
-                    <span class="calculate__icon">
+              <form action="calculation_form.php" class="form js-calculate-form js-form" method="post">
+                <div class="form__field">
+                  <div class="form__input-group">
+                    <span class="form__icon">
                       <svg class="icon icon-user">
                         <use xlink:href="img/sprite.svg#icon-user"></use>
                       </svg>
                     </span>
-                    <input type="text" class="calculate__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
                   </div>
-                  <div class="calculate__input-group">
-                    <span class="calculate__icon">
+                  <div class="form__input-group">
+                    <span class="form__icon">
                       <svg class="icon icon-call-answer">
                         <use xlink:href="img/sprite.svg#icon-call-answer"></use>
                       </svg>
                     </span>
-                    <input type="text" class="calculate__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off" />
+                    <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off" />
                   </div>
-                  <div class="calculate__input-group">
-                    <span class="calculate__icon">
+                  <div class="form__input-group">
+                    <span class="form__icon">
                       <svg class="icon icon-users">
                         <use xlink:href="img/sprite.svg#icon-users"></use>
                       </svg>
                     </span>
-                    <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
+                    <input type="text" class="form__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
                   </div>
                 </div>
-                <div class="calculate__button-wrapper">
-                  <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+                <div class="form__button-wrapper">
+                  <button type="submit" class="form__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
                 </div>
               </form>
             </div>
@@ -227,7 +230,7 @@
     <div class="discount" style='background-image: url(img/discount_bg.jpg);'>
       <div class="discount__container container-inner">
         <h4 class="discount__title">Оставьте заявку через данную форму и получите специальную скидку</h4>
-        <button class="btn-discount" type="button">Получить скидку до 20% на банкетное меню!</button>
+        <button class="btn-discount" type="button" data-modal-control="order">Получить скидку до 20% на банкетное меню!</button>
       </div>
     </div>
     <section class="awards">
@@ -338,9 +341,54 @@
             </svg>
           </span> Сб-Вс с 11:00 до 06:00 </div>
         <form action="/" class="reserve__form">
-          <a href="#" class="reserve__button reserve__button_highlighted"> Зарезервировать стол </a>
-          <a href="#" class="reserve__button"> Заказать с собой </a>
+          <a href="#" class="reserve__button reserve__button_highlighted" data-modal-control="order"> Зарезервировать стол </a>
+          <a href="#" class="reserve__button" data-modal-control="order"> Заказать с собой </a>
         </form>
+      </div>
+    </div>
+    <div data-modal="order" class="modal">
+      <div class="modal__container" data-modal-container="data-modal-container">
+        <div class="modal__inner">
+          <button class="modal__close" data-modal-close="data-modal-close">
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <form action="order_form.php" class="form form_order js-order-form js-form" method="post">
+            <div class="form__field">
+              <div class="form__input-group">
+                <span class="form__icon">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </span>
+                <input type="text" class="form__input" placeholder="Ваше Имя" name="order-name" required="required" autocomplete="off" />
+              </div>
+              <div class="form__input-group">
+                <span class="form__icon">
+                  <svg class="icon icon-call-answer">
+                    <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+                  </svg>
+                </span>
+                <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="order-phone" required="required" autocomplete="off" />
+              </div>
+              <div class="form__input-group">
+                <span class="form__icon">
+                  <svg class="icon icon-email-outline">
+                    <use xlink:href="img/sprite.svg#icon-email-outline"></use>
+                  </svg>
+                </span>
+                <input type="email" class="form__input" placeholder="E-mail" name="order-email" autocomplete="off" />
+              </div>
+              <div class="form__input-group">
+                <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
+              </div>
+            </div>
+            <div class="form__button-wrapper">
+              <button type="submit" class="form__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     </div>

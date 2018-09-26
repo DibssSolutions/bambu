@@ -8,7 +8,7 @@ $.validator.setDefaults({
 });
 
 var calculateForm = $('.js-calculate-form');
-// var orderForm = $('.js-order-form');
+var orderForm = $('.js-order-form');
 
 calculateForm.validate({
   rules: {
@@ -25,11 +25,33 @@ calculateForm.validate({
   }
 });
 
+orderForm.validate({
+  rules: {
+    'order-name': {
+      required: true
+    },
+    'order-phone': {
+      required: true
+    },
+    'order-email': {
+      required: true
+    }
+  }
+});
+
 var calculateSubmit = $('.js-calculate-form .js-btn-submit');
+var orderSubmit = $('.js-order-form .js-btn-submit');
 
 calculateSubmit.on('click', function(e) {
   calculateForm.valid();
   if (!calculateForm.valid()) {
+    e.preventDefault();
+  }
+});
+
+orderSubmit.on('click', function(e) {
+  orderForm.valid();
+  if (!orderFormgu.valid()) {
     e.preventDefault();
   }
 });

@@ -19,7 +19,8 @@
     
 .nav
     position: relative
-    +sm
+    padding-top: 15px
+    +md
         visibility: hidden
         opacity: 0
         position: absolute
@@ -33,7 +34,7 @@
         transition: opacity 0.7s, visibility 0.7s
         z-index: -1
     &.is-open
-        +sm
+        +md
             visibility: visible
             opacity: 1
             transition: opacity 0.7s, visibility 0.7s
@@ -41,29 +42,39 @@
         display: flex
         justify-content: flex-start
         align-items: flex-start
-        +sm 
+        +md 
             flex-flow: column
             padding: 16px 0
     &__item
         color: #fff
-        &:not(:first-child)
-            margin-left: 42px
-        &:last-child
+        margin-left: 42px
+        +lg 
+            margin-left: 24px
+        &:first-child
+            margin-left: 0
+        &_contacts
             text-align: right
-        +sm 
+            margin-left: 80px
+            +md 
+                text-align: center
+        +md 
             &:not(:first-child),
             &:first-child
                 margin: 16px auto
     &__link
         color: $white
+        font-family: $astra
+        font-size: 14px
+        // letter-spacing: -0.01em
     &__phone
-        font-size: 24px
+        font-size: 21px
+        line-height: 22px
         display: block
         line-height: 1
+        letter-spacing: 0.025em
     &__email
         display: block
         margin-top: 4px
-        text-transform: uppercase
         font-size: 13px
         font-weight: 300
 
@@ -87,7 +98,7 @@
     width: 32px
     height: 24px
     display: none
-    +sm 
+    +md 
         display: block
     span
         display: block
@@ -110,6 +121,8 @@
 .lang
     display: flex
     justify-content: flex-end
+    +md 
+        justify-content: center
     &__item
         position: relative
         &:not(:last-child)

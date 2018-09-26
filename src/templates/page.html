@@ -3,6 +3,12 @@
 
 {% block content %}
 
+    <div class="js-success message-sending">Ваш запрос принят, ожидайте. Наш менеджер с вами свяжется в течении 15 минут.
+        <button class="message-sending__x js-close">&#10006;</button>
+    </div>
+
+    <div class="js-error message-sending"></div>
+
     {% include "partials/_header.html" %}
     {% include "partials/_hero.html" %}
     {% include "partials/_advantages.html" %}
@@ -12,28 +18,7 @@
     {% include "partials/_awards.html" %}
     {% include "partials/_dishes.html" %}
     {% include "partials/_contacts.html" %}
-    {% include "partials/_footer.html" %} 
-
-    {# <div id="block-block-8" class="block block-block cute-6-desktop cute-6-laptop cute-7-tablet cute-12-phone cute-100 right no-margin no-title odd first block-count-13 block-region--1 block-8">
-        <div class="block-inner clearfix">
-            <div class="block-inner clearfix">
-                <div class="">
-                    <div class="block-content content">
-                        <div class="address contact-item">Москва-Сити, Пресненская набережная, дом 8, стр. 1
-                            <br>Башня Город-Столиц, 1 этаж. (ресторан BAMBOO.BAR)</div>
-                        <div class="telephone contact-item">+7 (985) 970 43 41</div>
-                        <div class="telephone contact-item">+7 (985) 766 49 62</div>
-                        <div class="work-time contact-item">Время работы</div>
-                        <div class="work-time-item contact-item">Пн-Пт с 08:00 до 06:00</div>
-                        <div class="work-time-item contact-item">Сб-Вс с 11:00 до 06:00</div>
-                        <div class="clearfix button-line">
-                            <a href="#block-webform-client-block-10" class="order-form button-line-left disable_fancybox-form">Зарезервировать стол</a>
-                            <a href="#block-webform-client-block-56" class="button-line-right fancybox-form">Заказать с собой</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> #}
+    {% include "partials/_footer.html" %}
+    {% include "partials/_order-form.html" %}
 
 {% endblock %}

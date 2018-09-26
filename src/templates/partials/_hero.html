@@ -8,30 +8,30 @@
             <h1 class="hero__name">bamboo.bar!</h1>
             <!-- FORM  -->
             <div class="hero__form">
-                <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
-                    <div class="calculate__field">
-                        <div class="calculate__input-group">
-                            <span class="calculate__icon">
+                <form action="calculation_form.php" class="form js-calculate-form js-form" method="post">
+                    <div class="form__field">
+                        <div class="form__input-group">
+                            <span class="form__icon">
                                 {{mixins.icon('user')}}
                             </span>
-                            <input type="text" class="calculate__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
+                            <input type="text" class="form__input" placeholder="Ваше Имя" name="calculate-name" required autocomplete="off" />
                         </div>
-                        <div class="calculate__input-group">
-                            <span class="calculate__icon">
+                        <div class="form__input-group">
+                            <span class="form__icon">
                                 {{mixins.icon('call-answer')}}
                             </span>
-                            <input type="text" class="calculate__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off"
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="calculate-phone" required autocomplete="off"
                             />
                         </div>
-                        <div class="calculate__input-group">
-                            <span class="calculate__icon">
+                        <div class="form__input-group">
+                            <span class="form__icon">
                                 {{mixins.icon('users')}}
                             </span>
-                            <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
+                            <input type="text" class="form__input" placeholder="Количество персон" name="calculate-number" autocomplete="off" />
                         </div>
                     </div>
-                    <div class="calculate__button-wrapper">
-                        <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+                    <div class="form__button-wrapper">
+                        <button type="submit" class="form__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
                     </div>
                 </form>
             </div>

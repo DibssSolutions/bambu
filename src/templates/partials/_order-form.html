@@ -1,0 +1,37 @@
+<div data-modal="order" class="modal">
+    <div class="modal__container" data-modal-container="data-modal-container">
+        <div class="modal__inner">
+            <button class="modal__close" data-modal-close="data-modal-close">
+                {{mixins.icon('close')}}
+            </button>
+            <form action="order_form.php" class="form form_order js-order-form js-form" method="post">
+                <div class="form__field">
+                    <div class="form__input-group">
+                        <span class="form__icon">
+                            {{mixins.icon('user')}}
+                        </span>
+                        <input type="text" class="form__input" placeholder="Ваше Имя" name="order-name" required="required" autocomplete="off"/>
+                    </div>
+                    <div class="form__input-group">
+                        <span class="form__icon">
+                            {{mixins.icon('call-answer')}}
+                        </span>
+                        <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="order-phone" required="required" autocomplete="off"/>
+                    </div>
+                    <div class="form__input-group">
+                        <span class="form__icon">
+                            {{mixins.icon('email-outline')}}
+                        </span>
+                        <input type="email" class="form__input" placeholder="E-mail" name="order-email" autocomplete="off"/>
+                    </div>
+                    <div class="form__input-group">
+                        <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
+                    </div>
+                </div>
+                <div class="form__button-wrapper">
+                    <button type="submit" class="form__submit js-btn-submit" value="Receive a result of calculation">Получить расчет за 15 минут!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

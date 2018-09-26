@@ -14,6 +14,3 @@ export const DOC = $(document);
 export const BODY = $('body');
 export const HTMLBODY = $('html, body');
 
-export const winWidth = size => window.matchMedia(`(max-width: ${size}px)`).matches;
-
-export const TOUCH = () => { return 'ontouchstart' in window; };

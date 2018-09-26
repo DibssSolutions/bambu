@@ -1,0 +1,49 @@
+[data-modal]
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	padding: 20px
+	opacity: 0
+	visibility: hidden
+	+vertical
+	white-space: nowrap
+	+gpu
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 1000
+[data-modal-container]
+	position: relative
+	padding: 48px 40px 38px
+	z-index: 20
+	border-radius: 4px
+	// min-width: 725px
+	// max-width: 780px
+	// max-height: 1140px
+	white-space: normal
+	text-align: left
+	// font-size: 24px
+	// color: $white 
+	vertical-align: middle
+	overflow: hidden
+	background-color: $white
+	box-shadow: 0 0 25px rgba(43, 45, 66, 0.25)
+	display: inline-block
+[data-modal-close]
+	position: absolute
+	top: 0
+	right: 0
+	padding: 20px
+	background-color: transparent
+	font-size: 0
+
+.modal
+	&__close
+		.icon
+			color: $grey
+			font-size: 14px
