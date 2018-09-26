@@ -18,6 +18,7 @@ $(document).ready(function() {
 
   $(slider).slick({
     slidesToShow: 1,
+    slidesToScroll: 3,
     centerMode: true,
     arrows: true,
     autoplay: true,
@@ -28,12 +29,12 @@ $(document).ready(function() {
     nextArrow: `<button class="btn-slider btn-slider_next" type="button">${next}</button>`,
     // cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     responsive: [
-      {
-        breakpoint: 1022,
-        settings: {
-          arrows: false
-        }
-      },
+      // {
+      //   breakpoint: 1022,
+      //   settings: {
+      //     arrows: false
+      //   }
+      // },
       {
         breakpoint: 768,
         settings: {
@@ -54,7 +55,7 @@ $(document).ready(function() {
     $(mobSlider).slick({
       variableWidth: true,
       slidesToShow: 1,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       mobileFirst: true,
       arrows: false,
       infinite: true,

@@ -1,7 +1,7 @@
-.advantages
-    margin: 30px auto
+.advantages 
+    margin: 54px auto 16px
     &__title
-        margin-bottom: 30px
+        margin-bottom: 74px
     &__items
         display: flex
         justify-content: center
@@ -18,8 +18,10 @@
         padding: 24px 10px 0
     &__image
         margin-bottom: 16px
+        .item_smaller &
+            margin-bottom: 11px
         .icon
-            font-size: 60px
+            font-size: 64px
             display: inline-block
     &__text
         font-weight: 700
@@ -31,10 +33,12 @@
         align-items: center
         justify-content: center
         flex-wrap: wrap
+        margin: 24px auto 68px
     &__logo
         +icenter
         filter: grayscale(100%) opacity(0.7)
         transition: filter $tr
+        padding: 0 24px 
         &:hover
             filter: grayscale(0) opacity(1)
         .slick-active &
@@ -54,6 +58,7 @@
     +cover
     position: relative
     text-align: center
+    padding: 35px 0
     &:after
         +coverdiv
         content: ''
@@ -65,9 +70,11 @@
         font-weight: 400
         position: relative
         z-index: 2
+        margin-bottom: 30px
     .btn-discount
         position: relative
         z-index: 2
+
 
 .btn-discount
     display: inline-block
@@ -83,8 +90,16 @@
     word-spacing: 0.07em
 
 .awards
+    margin: 74px auto 60px
+    &__title
+        margin-bottom: 60px
     &__items
         display: flex
         justify-content: center
         flex-wrap: wrap
         margin: -12px
+
+.dishes
+    &__title
+        margin-bottom: 31px
+    
