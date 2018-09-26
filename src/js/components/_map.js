@@ -10,6 +10,10 @@ export default class Map {
       lat: +config.map.data('marker-lat'),
       lng: +config.map.data('marker-lng')
     };
+    this._markerText = {
+      lat: +config.map.data('marker-text-lat'),
+      lng: +config.map.data('marker-text-lng')
+    };
 
    
     this._init();
@@ -22,164 +26,21 @@ export default class Map {
   _createMap() {
     this._map = new google.maps.Map(this._mapHTML, {
       center: this._center,
-      zoom: 15,
-      // disableDefaultUI: true,
-      // scrollwheel: false,
-      // zoomControl: true,
-      // draggable: false,
-    //   styles: [
-    //     {
-    //       'featureType': 'administrative.province',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'administrative.locality',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'administrative.neighborhood',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'administrative.land_parcel',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'administrative.land_parcel',
-    //       'elementType': 'geometry',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'poi',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     // {
-    //     //   'featureType': 'transit',
-    //     //   'elementType': 'all',
-    //     //   'stylers': [
-    //     //     {
-    //     //       'visibility': 'on'
-    //     //     },
-    //     //     {
-    //     //       'weight': '1.68'
-    //     //     },
-    //     //     {
-    //     //       'hue': '#006bff'
-    //     //     }
-    //     //   ]
-    //     // },
-    //     {
-    //       'featureType': 'transit',
-    //       'elementType': 'geometry.fill',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit',
-    //       'elementType': 'geometry.stroke',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit',
-    //       'elementType': 'labels',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit',
-    //       'elementType': 'labels.icon',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit.station',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit.station.airport',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit.station.bus',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'off'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       'featureType': 'transit.station.rail',
-    //       'elementType': 'all',
-    //       'stylers': [
-    //         {
-    //           'visibility': 'on'
-    //         }
-    //       ]
-    //     }
-    //   ]
+      zoom: 14,
+      zoomControl: false
     });
     new google.maps.Marker({
       position: this._marker,
       map: this._map,
       title: 'Пресненская набережная, дом 8, стр. 1'
-    //   label: 'Bamboo Bar'
-    //   icon: {
-    //     // url: 'img/marker.png',
-    //     scaledSize: new google.maps.Size(50, 57)
-    //   }
+    });
+    new google.maps.Marker({
+      position: this._markerText,
+      map: this._map,
+      icon: {
+        url: '/img/bamboo.png',
+        scaledSize: new google.maps.Size(86, 16)
+      }
     });
   }
    
@@ -194,4 +55,3 @@ if (map.length) {
     });
   });
 };
-
