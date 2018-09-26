@@ -303,11 +303,50 @@
         </div>
       </div>
     </section>
-    <div id="map">
+    <div class="map-wrapper">
+      <div id="map" class='js-map' data-marker-lat='55.746876' data-marker-lng='37.539343' data-center-lat='55.746876' data-center-lng='37.547895'>
+      </div>
+      <div class="reserve">
+        <div class="reserve__adress">
+          <span class="reserve__icon">
+            <svg class="icon icon-maps-and-flags">
+              <use xlink:href="img/sprite.svg#icon-maps-and-flags"></use>
+            </svg>
+          </span> Москва-Сити, Пресненская набережная, дом 8, стр. 1 <br> Башня Город-Столиц, 1 этаж. (ресторан BAMBOO.BAR) </div>
+        <div class="reserve__phone">
+          <span class="reserve__icon">
+            <svg class="icon icon-call-answer">
+              <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+            </svg>
+          </span> +7 (985) 970 43 41 </div>
+        <div class="reserve__phone reserve__last">
+          <span class="reserve__icon">
+            <svg class="icon icon-call-answer">
+              <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+            </svg>
+          </span> +7 (985) 766 49 62 </div>
+        <div class="reserve__time">
+          <span class="reserve__icon">
+            <svg class="icon icon-clock">
+              <use xlink:href="img/sprite.svg#icon-clock"></use>
+            </svg>
+          </span> Пн-Пт с 08:00 до 06:00 </div>
+        <div class="reserve__time">
+          <span class="reserve__icon">
+            <svg class="icon icon-clock">
+              <use xlink:href="img/sprite.svg#icon-clock"></use>
+            </svg>
+          </span> Сб-Вс с 11:00 до 06:00 </div>
+        <form action="/" class="reserve__form">
+          <a href="#" class="reserve__button reserve__button_highlighted"> Зарезервировать стол </a>
+          <a href="#" class="reserve__button"> Заказать с собой </a>
+        </form>
+      </div>
     </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>

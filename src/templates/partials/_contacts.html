@@ -1,3 +1,45 @@
-<div id="map">
-	
+<div class="map-wrapper">
+    <div id="map" class='js-map' data-marker-lat='55.746876' data-marker-lng='37.539343' data-center-lat='55.746876' data-center-lng='37.547895'>
+    </div>
+    <div class="reserve">
+        <div class="reserve__adress">
+            <span class="reserve__icon">
+                {{mixins.icon('maps-and-flags')}}
+            </span>
+            Москва-Сити, Пресненская набережная, дом 8, стр. 1
+            <br> Башня Город-Столиц, 1 этаж. (ресторан BAMBOO.BAR)
+        </div>
+        <div class="reserve__phone">
+            <span class="reserve__icon">
+                {{mixins.icon('call-answer')}}
+            </span>
+            +7 (985) 970 43 41
+        </div>
+        <div class="reserve__phone reserve__last">
+            <span class="reserve__icon">
+                {{mixins.icon('call-answer')}}
+            </span>
+            +7 (985) 766 49 62
+        </div>
+        <div class="reserve__time">
+            <span class="reserve__icon">
+                {{mixins.icon('clock')}}
+            </span>
+            Пн-Пт с 08:00 до 06:00
+        </div>
+        <div class="reserve__time">
+            <span class="reserve__icon">
+                {{mixins.icon('clock')}}
+            </span>
+            Сб-Вс с 11:00 до 06:00
+        </div>
+        <form action="/" class="reserve__form">
+            <a href="#" class="reserve__button reserve__button_highlighted">
+                Зарезервировать стол
+            </a>
+            <a href="#" class="reserve__button">
+                Заказать с собой
+            </a>
+        </form>
+    </div>
 </div>

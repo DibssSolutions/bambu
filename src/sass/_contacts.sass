@@ -1,3 +1,61 @@
 #map 
 	height: 400px
 	width: 100%
+	// area[log="miw"]
+	// 	display: block
+	// 	width: 200px
+	// 	height: 100px
+
+.map-wrapper
+	position: relative
+
+.reserve
+	position: absolute
+	right: calc(50% - 585px)
+	top: 50%
+	transform: translateY(-50%)
+	background-color: $white
+	z-index: 5
+	padding: 38px
+	&__adress,
+	&__phone,
+	&__time
+		padding-left: 22px
+		position: relative
+	&__adress
+		padding-bottom: 15px
+	&__last
+		padding-bottom: 22px
+	&__icon
+		position: absolute
+		left: 0
+		top: 2px
+		.icon
+			color: #999999
+		// .reserve__adress &
+		// 	top: 2px
+		// .reserve__phone &
+		// 	top: 13px
+		// .reserve__time &
+		// 	top: 2px
+	&__form 
+		+flex-beetween
+		margin-top: 24px
+	&__button
+		display: inline-block
+		width: 244px
+		padding: 15px
+		border: 2px solid #cccccc
+		line-height: 1.5
+		font-size: 14px
+		font-family: $astra
+		font-weight: 700
+		text-align: center
+		transition: border-color $tr
+		&:first-child
+			margin-right: 24px
+		&:hover
+			border: 2px solid $green
+		&_highlighted
+			border: 2px solid $green
+	
