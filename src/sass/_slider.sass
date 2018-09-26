@@ -1,10 +1,23 @@
 .slider
     z-index: 1
+    white-space: nowrap
+    opacity: 0
+    visibility: hidden
+    &.slick-initialized 
+        opacity: 1
+        visibility: visible
+    .slick-track
+        white-space: nowrap
+    .slick-slide
+        display: inline-block
+        .slick-initialize &
+            display: block
     &:hover .slider__slide:not(:hover)
         &:after
             +vis
     &__slide
         position: relative
+        display: inline-block
         &:after
             +coverdiv
             content: ''
