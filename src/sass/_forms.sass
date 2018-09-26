@@ -2,120 +2,162 @@
 
 .form
 
-    &__field
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-        margin: 0 -15px 32px
-        text-align: center
-        position: relative
-        .form_order &
-            flex-flow: column
+	&__field
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 0 -15px 32px
+		text-align: center
+		position: relative
+		.form_order &
+			flex-flow: column
 
-        +sm 
-            flex-flow: column
-            margin: 20px 0
-            padding: 0 15px
-    &__input-group
-        flex-grow: 1
-        position: relative
-        margin: 0 15px
-        position: relative
-        border: 3px solid $grey
-        background-color: $white
-        .form_order &
-            margin-bottom: 20px
-        +sm 
-            margin-bottom: 16px
-    &__icon
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        left: 12px
-        font-size: 0
-        .icon
-            font-size: 14px
-            color: $grey
-            +icenter
-    &__input
-        display: block
-        width: 100%
-        background-color: transparent !important
-        font-size: 14px
-        font-weight: 400
-        font-style: italic
-        padding-left: 34px
-        font-family: $astra
-        height: 43px
-        &::placeholder
-            background-color: inherit
-            font-size: inherit
-            font-weight: inherit
-            line-height: inherit
-            color: inherit
-        &:focus
-            border-bottom-color: rgba(#fff, 0.7)
-            &::placeholder
-                font-size: 0
-        &.error
-            color: rgba(#f00, 0.7)
-        +sm 
-            border-bottom-width: 1px
-    label.error
-        top: 100%
-        left: 0
-        right: 0
-        position: absolute
-        padding: 4px 0 0 0 
-        font-size: 14px
-        color: red
-        width: 100%
-        text-align: left
-    &__textarea
-        width: 100%
-        padding: 4px    
-        resize: vertical
-        height: 100px
-        box-sizing: border-box
-        font-size: 14px
-        font-weight: 400
-        font-style: italic
-        font-family: $astra
-        outline: none
-    &__submit
-        display: inline-block
-        height: 45px
-        line-height: 45px
-        font-size: 16px
-        min-width: 306px
-        text-align: center
-        color: $black
-        line-height: 1.83
-        text-align: center
-        background-color: $green
-        text-transform: uppercase
-        border: 1px solid darken($green, 40%)
-        transition: background-color $tr, color $tr
-        .form_order &
-            width: 100%
-        &:disabled
-            cursor: default
-        &.disabled 
-            opacity: 0.5
-        &:hover
-            background-color: darken($green, 20%)
-            color: $white
-        +md 
-            font-size: 16px
-            padding: 16px 50px
-        +sm 
-            font-size: 14px
-            padding: 14px 0
-            width: 100% 
-
-    
-
-
+		+sm 
+			flex-flow: column
+			margin: 20px 0
+			padding: 0 15px
+	&__input-group
+		flex-grow: 1
+		position: relative
+		margin: 0 15px
+		position: relative
+		border: 3px solid $grey
+		background-color: $white
+		.form_order &
+			margin-bottom: 30px
+		+sm 
+			margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0
+	&__icon,
+	&__icon-down
+		position: absolute
+		top: 50%
+		margin-top: -6px
+		left: 12px
+		font-size: 0
+		.icon
+			font-size: 11px
+			color: $grey
+			+icenter
+			.modal &
+				color: #999 
+	&__icon-down
+		left: auto
+		right: 17px
+		margin-top: -3px
+		.icon
+			font-size: 6px
+	&__input
+		display: block
+		width: 100%
+		background-color: transparent !important
+		font-size: 14px
+		font-weight: 400
+		padding: 10px 10px 10px 34px
+		font-family: $astra
+		height: 43px
+		color: $black 
+		&::placeholder
+			background-color: inherit
+			font-size: inherit
+			font-weight: inherit
+			line-height: inherit
+			color: $black 
+			font-style: italic
+		&:focus
+			border-bottom-color: rgba(#fff, 0.7)
+			&::placeholder
+				font-size: 0
+		&.error
+			color: rgba(#f00, 0.7)
+		&:required
+			position: relative
+			background-color: red 
+		+sm 
+			border-bottom-width: 1px
+	label.error
+		top: 100%
+		left: 0
+		right: 0
+		position: absolute
+		padding: 4px 0 0 0 
+		font-size: 11px
+		color: #88d059
+		width: 100%
+		text-align: left
+	&__textarea
+		width: 100%
+		padding: 13px    
+		resize: vertical
+		height: 100px
+		box-sizing: border-box
+		font-size: 14px
+		font-weight: 400
+		font-style: italic
+		font-family: $astra
+		outline: none
+		border: none
+		resize: none
+		color: $black 
+		&::placeholder
+			color: $black 
+			font-style: italic
+		&:focus
+			&::placeholder
+				font-size: 0
+	&__submit
+		display: inline-block
+		height: 45px
+		line-height: 45px
+		font-size: 16px
+		min-width: 306px
+		text-align: center
+		color: $black
+		line-height: 1.83
+		text-align: center
+		background-color: $green
+		text-transform: uppercase
+		border: 1px solid darken($green, 40%)
+		transition: background-color $tr, color $tr
+		.form_order &
+			width: 100%
+		&:disabled
+			cursor: default
+		&.disabled 
+			opacity: 0.5
+		&:hover
+			background-color: darken($green, 20%)
+			color: $white
+		+md 
+			font-size: 16px
+			padding: 16px 50px
+		+sm 
+			font-size: 14px
+			padding: 14px 0
+			width: 100% 
+	&__row
+		+clr
+		&:not(:last-child)
+			margin-bottom: 30px 
+	&__col
+		float: left
+		width: 50%
+	&__button-wrapper
+		margin-top: 35px
+	&__title
+		margin-bottom: 38px
+	&__parking
+		margin-top: 32px
+		font-size: 14px
+		font-weight: 400
+		text-align: center
+		.icon
+			margin: 0 7px 0 0
+			font-size: 20px
+			color: #76c93f
+			vertical-align: top
+			display: inline-block
 
 
 

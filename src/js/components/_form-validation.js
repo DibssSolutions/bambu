@@ -51,7 +51,7 @@ calculateSubmit.on('click', function(e) {
 
 orderSubmit.on('click', function(e) {
   orderForm.valid();
-  if (!orderFormgu.valid()) {
+  if (!orderForm.valid()) {
     e.preventDefault();
   }
 });

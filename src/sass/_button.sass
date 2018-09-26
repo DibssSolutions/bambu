@@ -1,0 +1,25 @@
+.btn
+	display: inline-block
+	width: 244px
+	padding: 13px 15px 12px
+	border: 2px solid #ccc
+	line-height: 1.5
+	font-size: 14px
+	font-family: $astra
+	font-weight: 700
+	text-align: center
+	transition: border-color $tr, background-color $tr, color $tr
+	&:hover
+		border: 2px solid $green
+	&_highlighted
+		border: 2px solid $green
+		background-color: $white
+	&_green
+		color: $white 
+		border-color: $green 
+		background-color: $green 
+		&:hover
+			color: $black 
+			background-color: $white
+	&_w100
+		width: 100% 
