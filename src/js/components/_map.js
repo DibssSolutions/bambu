@@ -26,7 +26,8 @@ export default class Map {
   _createMap() {
     this._map = new google.maps.Map(this._mapHTML, {
       center: this._center,
-      zoom: 14
+      zoom: 14,
+      zoomControl: false
     });
     new google.maps.Marker({
       position: this._marker,
