@@ -11,3 +11,4 @@ import './components/_map';
 import './components/_modal';
 import './components/_scrollTo';
 import './components/_datepicker';
+import './components/_fansy';

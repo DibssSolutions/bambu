@@ -69,7 +69,7 @@
 		font-family: $astra
 		font-weight: 700
 		text-align: center
-		transition: border-color $tr
+		transition: border-color $tr, color $tr, background-color $tr
 		+lg 
 			width: 200px
 		+sm 
@@ -84,4 +84,8 @@
 			border: 2px solid $green
 		&_highlighted
 			border: 2px solid $green
+			&:hover
+				color: $white 
+				border-color: $green 
+				background-color: $green 
 	
