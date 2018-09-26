@@ -1,5 +1,6 @@
 {% set halls = [
     {
+        id: "first",
         image: 'first_floor.jpg',
         title: '1 этаж ',
         square: '220 м²',
@@ -8,6 +9,7 @@
         link: 'Просмотреть схему зала'
     },
     {
+        id: "second",
         image: 'second_floor.jpg',
         title: '2 этаж ',
         square: '120 м²',
@@ -16,6 +18,7 @@
         link: 'Просмотреть схему зала'
     },
     {
+        id: "caraoke",
         image: 'veranda.jpg',
         title: 'веранда ',
         square: '450 м²',
@@ -24,6 +27,7 @@
         link: 'Просмотреть схему веранды'
     },
     {
+        id: "veranda",
         image: 'caraoke.jpg',
         title: 'караоке',
         square: '100 м²',
@@ -40,12 +44,18 @@
         </h3>
         <div class="halls__halls">
             {% for item in halls %}
-                <div class="hall">
+                <div class="hall" id="{{item.id}}">
                     <a href="#" class="hall__image" style='background-image: url(img/{{item.image}});'></a>
                     <h4 class="hall__title">{{item.title}}</h4>
                     <div class="hall__props">
-                        <b>Площадь: </b>{{item.square}}
-                        <b>Вместимость: </b>{{item.seats}}
+                        <span class="hall__square">
+                            <b>Площадь:
+                            </b>{{item.square}}
+                        </span>
+                        <span class="hall_seats">
+                            <b>Вместимость:
+                            </b>{{item.seats}}
+                        </span>
                     </div>
                     <div class="hall__descr">
                         {{item.descr | safe}}

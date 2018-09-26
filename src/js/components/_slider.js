@@ -17,12 +17,12 @@ $(document).ready(function() {
   });
 
   $(slider).slick({
-    slidesToShow: 1,
+    // slidesToShow: 1,
     slidesToScroll: 3,
     centerMode: true,
     arrows: true,
     autoplay: true,
-    speed: 1000,
+    speed: 500,
     centerPadding: '1px',
     variableWidth: true,
     prevArrow: `<button class="btn-slider btn-slider_prev" type="button">${prev}</button>`,
@@ -38,7 +38,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          centerMode: false,
+          // centerMode: false,
           arrows: false
         }
       }

@@ -13,18 +13,20 @@
         +sm 
             flex-flow: column
             margin: 20px 0
-            padding: 0 15px
+            // padding: 0 15px
     &__input-group
-        flex: 0 0 222px
+        width: 222px
         position: relative
         margin: 0 15px
         position: relative
         border: 3px solid $grey
         background-color: $white
         .form_order &
-            margin-bottom: 20px
+            margin: 0 0 20px 0
+            width: auto
         +sm 
-            margin-bottom: 16px
+            margin: 0 0 20px 0
+            width: 100%
     &__icon
         position: absolute
         top: 50%
@@ -64,8 +66,8 @@
         left: 0
         right: 0
         position: absolute
-        padding: 4px 0 0 0 
-        font-size: 14px
+        padding-top: 2px
+        font-size: 13px
         color: red
         width: 100%
         text-align: left
@@ -104,12 +106,8 @@
         &:hover
             background-color: darken($green, 20%)
             color: $white
-        +md 
-            font-size: 16px
-            padding: 16px 50px
         +sm 
             font-size: 14px
-            padding: 14px 0
             width: 100% 
 
     

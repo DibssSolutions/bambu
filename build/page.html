@@ -27,16 +27,16 @@
           <nav class="nav js-nav" role="navigation">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">1 этаж (10-100 персон)</a>
+                <a class="nav__link" href="#first">1 этаж (10-100 персон)</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">2 этаж (10-60 персон)</a>
+                <a class="nav__link" href="#second">2 этаж (10-60 персон)</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">караоке (10-50 персон)</a>
+                <a class="nav__link" href="#caraoke">караоке (10-50 персон)</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Веранда (10-200 персон)</a>
+                <a class="nav__link" href="#veranda">Веранда (10-200 персон)</a>
               </li>
               <li class="nav__item nav__item_contacts">
                 <a href="tel:+74956425962" class="nav__phone">+7 (495) 642-59-62</a>
@@ -158,35 +158,51 @@
           <span>ЗАЛЫ РЕСТОРАНА</span>
         </h3>
         <div class="halls__halls">
-          <div class="hall">
+          <div class="hall" id="first">
             <a href="#" class="hall__image" style='background-image: url(img/first_floor.jpg);'></a>
             <h4 class="hall__title">1 этаж </h4>
             <div class="hall__props">
-              <b>Площадь: </b>220 м² <b>Вместимость: </b>до 100 человек </div>
+              <span class="hall__square">
+                <b>Площадь: </b>220 м² </span>
+              <span class="hall_seats">
+                <b>Вместимость: </b>до 100 человек </span>
+            </div>
             <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
             <a href="#" class="hall__link">Просмотреть схему зала</a>
           </div>
-          <div class="hall">
+          <div class="hall" id="second">
             <a href="#" class="hall__image" style='background-image: url(img/second_floor.jpg);'></a>
             <h4 class="hall__title">2 этаж </h4>
             <div class="hall__props">
-              <b>Площадь: </b>120 м² <b>Вместимость: </b>до 60 человек </div>
+              <span class="hall__square">
+                <b>Площадь: </b>120 м² </span>
+              <span class="hall_seats">
+                <b>Вместимость: </b>до 60 человек </span>
+            </div>
             <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
             <a href="#" class="hall__link">Просмотреть схему зала</a>
           </div>
-          <div class="hall">
+          <div class="hall" id="caraoke">
             <a href="#" class="hall__image" style='background-image: url(img/veranda.jpg);'></a>
             <h4 class="hall__title">веранда </h4>
             <div class="hall__props">
-              <b>Площадь: </b>450 м² <b>Вместимость: </b>до 200 человек </div>
+              <span class="hall__square">
+                <b>Площадь: </b>450 м² </span>
+              <span class="hall_seats">
+                <b>Вместимость: </b>до 200 человек </span>
+            </div>
             <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
             <a href="#" class="hall__link">Просмотреть схему веранды</a>
           </div>
-          <div class="hall">
+          <div class="hall" id="veranda">
             <a href="#" class="hall__image" style='background-image: url(img/caraoke.jpg);'></a>
             <h4 class="hall__title">караоке</h4>
             <div class="hall__props">
-              <b>Площадь: </b>100 м² <b>Вместимость: </b>до 50 человек </div>
+              <span class="hall__square">
+                <b>Площадь: </b>100 м² </span>
+              <span class="hall_seats">
+                <b>Вместимость: </b>до 50 человек </span>
+            </div>
             <div class="hall__descr"> Все необходимое для проведения тематических мастер-классов и тренингов и небольших корпоративов до 60 персон. </div>
             <a href="#" class="hall__link">Просмотреть схему караоке</a>
           </div>
@@ -301,48 +317,69 @@
         <div class="slider__slide">
           <div class="slider__image" style='background-image: url(img/slider_2.jpg);'></div>
         </div>
+        <div class="slider__slide">
+          <div class="slider__image" style='background-image: url(img/slider_1.jpg);'></div>
+        </div>
+        <div class="slider__slide">
+          <div class="slider__image" style='background-image: url(img/slider_2.jpg);'></div>
+        </div>
+        <div class="slider__slide">
+          <div class="slider__image" style='background-image: url(img/slider_3.jpg);'></div>
+        </div>
       </div>
     </section>
-    <div class="map-wrapper">
-      <div id="map" class='js-map' data-marker-lat='55.746876' data-marker-lng='37.539343' data-marker-text-lat='55.746276' data-marker-text-lng='37.543543' data-center-lat='55.746876' data-center-lng='37.547895'>
-      </div>
-      <div class="reserve">
-        <div class="reserve__adress">
-          <span class="reserve__icon">
-            <svg class="icon icon-maps-and-flags">
-              <use xlink:href="img/sprite.svg#icon-maps-and-flags"></use>
-            </svg>
-          </span> Москва-Сити, Пресненская набережная, дом 8, стр. 1 <br> Башня Город-Столиц, 1 этаж. (ресторан BAMBOO.BAR) </div>
-        <div class="reserve__phone">
-          <span class="reserve__icon">
-            <svg class="icon icon-call-answer">
-              <use xlink:href="img/sprite.svg#icon-call-answer"></use>
-            </svg>
-          </span> +7 (985) 970 43 41 </div>
-        <div class="reserve__phone reserve__last">
-          <span class="reserve__icon">
-            <svg class="icon icon-call-answer">
-              <use xlink:href="img/sprite.svg#icon-call-answer"></use>
-            </svg>
-          </span> +7 (985) 766 49 62 </div>
-        <div class="reserve__time">
-          <span class="reserve__icon">
-            <svg class="icon icon-clock">
-              <use xlink:href="img/sprite.svg#icon-clock"></use>
-            </svg>
-          </span> Пн-Пт с 08:00 до 06:00 </div>
-        <div class="reserve__time">
-          <span class="reserve__icon">
-            <svg class="icon icon-clock">
-              <use xlink:href="img/sprite.svg#icon-clock"></use>
-            </svg>
-          </span> Сб-Вс с 11:00 до 06:00 </div>
-        <form action="/" class="reserve__form">
-          <a href="#" class="reserve__button reserve__button_highlighted" data-modal-control="order"> Зарезервировать стол </a>
-          <a href="#" class="reserve__button" data-modal-control="order"> Заказать с собой </a>
-        </form>
+    <div class="contacts">
+      <h3 class="contacts__title title">
+        <span>Контакты</span>
+      </h3>
+      <div class="map-wrapper">
+        <div class="reserve">
+          <div class="reserve__adress">
+            <span class="reserve__icon">
+              <svg class="icon icon-maps-and-flags">
+                <use xlink:href="img/sprite.svg#icon-maps-and-flags"></use>
+              </svg>
+            </span> Москва-Сити, Пресненская набережная, дом 8, стр. 1 <br> Башня Город-Столиц, 1 этаж. (ресторан BAMBOO.BAR) </div>
+          <div class="reserve__phone">
+            <span class="reserve__icon">
+              <svg class="icon icon-call-answer">
+                <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+              </svg>
+            </span> +7 (985) 970 43 41 </div>
+          <div class="reserve__phone reserve__last">
+            <span class="reserve__icon">
+              <svg class="icon icon-call-answer">
+                <use xlink:href="img/sprite.svg#icon-call-answer"></use>
+              </svg>
+            </span> +7 (985) 766 49 62 </div>
+          <div class="reserve__time"> Время работы </div>
+          <div class="reserve__time">
+            <span class="reserve__icon">
+              <svg class="icon icon-clock">
+                <use xlink:href="img/sprite.svg#icon-clock"></use>
+              </svg>
+            </span> Пн-Пт с 08:00 до 06:00 </div>
+          <div class="reserve__time">
+            <span class="reserve__icon">
+              <svg class="icon icon-clock">
+                <use xlink:href="img/sprite.svg#icon-clock"></use>
+              </svg>
+            </span> Сб-Вс с 11:00 до 06:00 </div>
+          <form action="/" class="reserve__form">
+            <a href="#" class="reserve__button reserve__button_highlighted" data-modal-control="order"> Зарезервировать стол </a>
+            <a href="#" class="reserve__button" data-modal-control="order"> Заказать с собой </a>
+          </form>
+        </div>
+        <div id="map" class='js-map' data-marker-lat='55.746876' data-marker-lng='37.539343' data-marker-text-lat='55.746276' data-marker-text-lng='37.543543' data-center-lat='55.746876' data-center-lng='37.547895'>
+        </div>
       </div>
     </div>
+    <footer class="footer">
+      <a href="index.html" class="logo">
+        <img src="img/logo_bottom.png" alt="main-logo" />
+      </a>
+      <div class="footer__copyright"> © 2018 Bamboo Bar - Panasian Restaurant </div>
+    </footer>
     <div data-modal="order" class="modal">
       <div class="modal__container" data-modal-container="data-modal-container">
         <div class="modal__inner">
