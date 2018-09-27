@@ -6,11 +6,42 @@ $(document).ready(function() {
     var input = $(form).find('input');
 
     var urlPhpFile;
+    // var cls;
+    // $(form).hasClass(cls);
 
-    if ($(form).hasClass('js-order-form')) {
-      urlPhpFile = 'order_form.php';
+    // switch (cls) {
+    //   case 'js-calculate-form':
+    //     urlPhpFile = 'calculation_form.php';
+    //     break;
+    //   case 'js-party-form':
+    //     urlPhpFile = 'party_form.php';
+    //     break;
+    //   case 'js-reserve-form':
+    //     urlPhpFile = 'reserve_form.php';
+    //     break;
+    //   case 'js-myself-form':
+    //     urlPhpFile = 'myself_form.php';
+    //     break;
+    //   default:
+    //     console.log('Form handler is unknown');
+    // }
+
+    if ($(form).hasClass('js-party-form')) {
+      urlPhpFile = 'party_form.php';
     } else if ($(form).hasClass('js-calculate-form')) {
       urlPhpFile = 'calculation_form.php';
+    } else if ($(form).hasClass('js-reserve-form')) {
+      urlPhpFile = 'reserve_form.php';
+    } else if ($(form).hasClass('js-myself-form')) {
+      urlPhpFile = 'myself_form.php';
+    } else if ($(form).hasClass('js-booking-hall-1')) {
+      urlPhpFile = 'booking_hall_1_form.php';
+    } else if ($(form).hasClass('js-booking-hall-2')) {
+      urlPhpFile = 'booking_hall_2_form.php';
+    } else if ($(form).hasClass('js-booking-veranda')) {
+      urlPhpFile = 'booking_veranda_form.php';
+    } else if ($(form).hasClass('js-booking-caraoke')) {
+      urlPhpFile = 'booking_caraoke_form.php';
     }
 
     $.ajax({
@@ -51,7 +82,6 @@ $(document).ready(function() {
     });
   });
 
-  
   $('.message-sending').on('click', function(e) {
     var target = event.target;
 

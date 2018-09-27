@@ -3,12 +3,15 @@
     $to = "banket@bamboobar.su";
 
     /* subject (message theme) */
-    $subject = 'Новый запрос на расчет банкета';
+    $subject = 'Бронирование веранды';
 
     /* form fields (getting by attr name) */
-    $name = $_POST['calculate-name'];
-    $phone = $_POST['calculate-phone'];
-    $number = $_POST['calculate-number'];
+    $name = $_POST['veranda-name'];
+    $phone = $_POST['veranda-phone'];
+    $people = $_POST['veranda-number-of-people'];
+    $date = $_POST['veranda-date'];
+    $time = $_POST['veranda-time'];
+    $comments = $_POST['veranda-comments'];
     
     /* message */
     $body = '
@@ -19,7 +22,10 @@
         <body>'
            .' <p>Имя: <strong>' . $name . '</strong></p>'
            .' <p>Телефон: <strong>' . $phone . '</strong></p>'
-           .' <p>Количество персон: <strong>' . $number . '</strong></p>'
+           .' <p>Количество людей: <strong>' . $people . '</strong></p>'
+           .' <p>Дата: <strong>' . $date . '</strong></p>'
+           .' <p>Время: <strong>' . $time . '</strong></p>'
+           .' <p>Комментарий: <strong>' . $comments . '</strong></p>'
         .'</body>
         </html>';
 

@@ -1,15 +1,14 @@
 <?php
     /* Email address which will get the message */
-    $to = "vitalik.kopylov@gmail.com";
+    $to = "banket@bamboobar.su";
 
     /* subject (message theme) */
-    $subject = 'Заказ еды на вынос';
+    $subject = 'Резервирование стола';
 
     /* form fields (getting by attr name) */
-    $name = $_POST['order-name'];
-    $phone = $_POST['order-phone'];
-    $email = $_POST['order-email'];
-    $comments = $_POST['order-comments'];
+    $date = $_POST['reserve-date'];
+    $time = $_POST['reserve-time'];
+    $comments = $_POST['reserve-comments'];
     
     /* message */
     $body = '
@@ -18,9 +17,8 @@
          <title>' . $subject . '</title>
         </head>
         <body>'
-           .' <p>Имя: <strong>' . $name . '</strong></p>'
-           .' <p>Телефон: <strong>' . $phone . '</strong></p>'
-           .' <p>Емейл: <strong>' . $email . '</strong></p>'
+           .' <p>Дата: <strong>' . $date . '</strong></p>'
+           .' <p>Время: <strong>' . $time . '</strong></p>'
            .' <p>Комментарий: <strong>' . $comments . '</strong></p>'
         .'</body>
         </html>';

@@ -1,12 +1,13 @@
-import {OPEN, ACTIVE, BODY} from './../constants';
+import { OPEN, ACTIVE, BODY } from './../constants';
 
-;(() => {
-
+(() => {
   const controls = $('[data-modal-control]');
   const modals = $('[data-modal]');
   controls.each((i, control) => {
     control = $(control);
-    const modal = modals.filter(`[data-modal="${control.data('modal-control')}"]`);
+    const modal = modals.filter(
+      `[data-modal="${control.data('modal-control')}"]`
+    );
 
     control.on('click', e => {
       e.preventDefault();
@@ -24,7 +25,17 @@ import {OPEN, ACTIVE, BODY} from './../constants';
     const hide = () => modal.removeClass(OPEN);
 
     BODY.on('click', e => {
-      if ($(e.target).closest(inner).length || $(e.target).closest(close).length || $(e.target).closest(controls).length ) return;
+      if (
+        $(e.target).closest(inner).length ||
+        $(e.target).closest(close).length ||
+        $(e.target).closest(controls).length
+      )
+        return;
+      hide();
+    });
+
+    BODY.on('keydown', e => {
+      if (e.which !== 27) return;
       hide();
     });
 
@@ -33,5 +44,6 @@ import {OPEN, ACTIVE, BODY} from './../constants';
       hide();
     });
   });
-
 })();
+
+

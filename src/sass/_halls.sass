@@ -17,22 +17,28 @@
     +sm     
         flex: 0 0 100%
         width: 100%
-        padding-bottom: 24px
+        padding-bottom: 32px
     &__image
         display: block
         +cover
         padding-bottom: 314px
         margin-bottom: 26px
+        +sm 
+            margin-bottom: 12px
     &__title
         font-size: 20px
         font-weight: 700
         line-height: 1.05
         text-transform: uppercase
         margin-bottom: 8px
+        +sm 
+            font-size: 18px
     &__props
         font-size: 18px
         line-height: 1.17
         margin-bottom: 9px
+        +sm 
+            font-size: 16px
     &__square
         display: inline-block
         margin-right: 5px
@@ -50,3 +56,9 @@
         font-weight: 700
         color: $darkGreen
         border-bottom: 1px solid $darkGreen
+        display: inline-block
+        margin-bottom: 12px
+        transition: border-bottom-color $tr
+        &:hover
+            border-bottom-color: $black
+

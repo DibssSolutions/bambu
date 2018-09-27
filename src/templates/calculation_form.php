@@ -1,6 +1,6 @@
 <?php
     /* Email address which will get the message */
-    $to = "vitalik.kopylov@gmail.com";
+    $to = "banket@bamboobar.su";
 
     /* subject (message theme) */
     $subject = 'Новый запрос на расчет банкета';

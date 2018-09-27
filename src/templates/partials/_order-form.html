@@ -1,7 +1,10 @@
 <div data-modal="booking" class="modal">
     <div class="modal__container" data-modal-container="data-modal-container">
         <div class="modal__inner">
-            <form action="order_form.php" class="form form_order js-order-form js-form" method="post">
+            <button class="modal__close" data-modal-close="data-modal-close">
+                {{mixins.icon('close')}}
+            </button>
+            <form action="party_form.php" class="form form_order js-party-form js-form" method="post">
                 <h3 class="form__title title">
                     <span>Оставить заявку на банкет</span>
                 </h3>
@@ -9,7 +12,7 @@
                     <span class="form__icon">
                         {{mixins.icon('user')}}
                     </span>
-                    <input type="text" class="form__input" placeholder="Ваше Имя" name="order-name" required="required" autocomplete="off"/>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="party-name" required="required" autocomplete="off"/>
                 </div>
                 <div class="form__row">
                     <div class="form__col">
@@ -17,7 +20,7 @@
                             <span class="form__icon">
                                 {{mixins.icon('call-answer')}}
                             </span>
-                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="order-phone" required="required" autocomplete="off"/>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="party-phone" required="required" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="form__col">
@@ -25,7 +28,7 @@
                             <span class="form__icon">
                                 {{mixins.icon('people')}}
                             </span>
-                            <input type="text" class="form__input" placeholder="Количество персон" name="number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
+                            <input type="text" class="form__input" placeholder="Количество персон" name="party-number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
                         </div>
                     </div>
                 </div>
@@ -38,7 +41,7 @@
                             <span class="form__icon-down">
                                 {{mixins.icon('down')}}
                             </span>
-                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="date" required="required" autocomplete="off"/>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="party-date" required="required" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="form__col">
@@ -46,12 +49,12 @@
                             <span class="form__icon">
                                 {{mixins.icon('time')}}
                             </span>
-                            <input type="text" class="form__input" placeholder="Время" name="time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputFormat="HH:MM"  data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                            <input type="text" class="form__input" placeholder="Время" name="party-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
                         </div>
                     </div>
                 </div>
                 <div class="form__input-group">
-                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="party-comments"></textarea>
                 </div>
                 <div class="form__button-wrapper">
                     <button type="submit" class="btn btn_green btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
@@ -64,8 +67,11 @@
 
 <div data-modal="reserve" class="modal">
     <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
         <div class="modal__inner">
-            <form action="order_form.php" class="form form_order js-order-form js-form" method="post">
+            <form action="reserve_form.php" class="form form_order js-reserve-form js-form" method="post">
                 <h3 class="form__title title">
                     <span>Зарезервировать стол</span>
                 </h3>
@@ -78,7 +84,7 @@
                             <span class="form__icon-down">
                                 {{mixins.icon('down')}}
                             </span>
-                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="date" required="required" autocomplete="off"/>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="reserve-date" required="required" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="form__col">
@@ -86,12 +92,12 @@
                             <span class="form__icon">
                                 {{mixins.icon('time')}}
                             </span>
-                            <input type="text" class="form__input" placeholder="Время" name="time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputFormat="HH:MM"  data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                            <input type="text" class="form__input" placeholder="Время" name="reserve-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
                         </div>
                     </div>
                 </div>
                 <div class="form__input-group">
-                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="reserve-comments"></textarea>
                 </div>
                 <div class="form__button-wrapper">
                     <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Зарезервировать стол</button>
@@ -104,38 +110,41 @@
 
 <div data-modal="myself" class="modal">
     <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
         <div class="modal__inner">
-            <form action="order_form.php" class="form form_order js-order-form js-form" method="post">
+            <form action="myself_form.php" class="form form_order js-myself-form js-form" method="post">
                 <h3 class="form__title title">
                     <span>Заказать с собой</span>
                 </h3>
-               <div class="form__input-group">
-                   <span class="form__icon">
-                       {{mixins.icon('user')}}
-                   </span>
-                   <input type="text" class="form__input" placeholder="Ваше Имя" name="myself-name" required="required" autocomplete="off"/>
-               </div>
-               <div class="form__row">
-                   <div class="form__col">
-                       <div class="form__input-group">
-                           <span class="form__icon">
-                               {{mixins.icon('call-answer')}}
-                           </span>
-                           <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="myself-phone" required="required" autocomplete="off"/>
-                       </div>
-                   </div>
-                   <div class="form__col">
-                       <div class="form__input-group">
-                           <span class="form__icon">
-                               {{mixins.icon('email-outline')}}
-                           </span>
-                           <input type="email" class="form__input" placeholder="Email" name="myself-email" required="required" autocomplete="off"/>
-                       </div>
-                   </div>
-               </div>
-               <div class="form__input-group">
-                   <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
-               </div>
+                <div class="form__input-group">
+                    <span class="form__icon">
+                        {{mixins.icon('user')}}
+                    </span>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="myself-name" required="required" autocomplete="off"/>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="myself-phone" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('email-outline')}}
+                            </span>
+                            <input type="email" class="form__input" placeholder="Email" name="myself-email" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__input-group">
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="order-comments"></textarea>
+                </div>
                 <div class="form__button-wrapper">
                     <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
                 </div>
@@ -144,3 +153,272 @@
         </div>
     </div>
 </div>
+
+<div data-modal="booking-hall-1" class="modal">
+    <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
+        <div class="modal__inner">
+            <form action="booking_hall_1_form.php" class="form form_order js-booking-hall-1 js-form" method="post">
+                <h3 class="form__title title">
+                    <span>Забронировать 1й этаж</span>
+                </h3>
+                <div class="form__input-group">
+                    <span class="form__icon">
+                        {{mixins.icon('user')}}
+                    </span>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="hall-1-name" required="required" autocomplete="off"/>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="hall-1-phone" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('people')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Количество персон" name="hall-1-number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('date')}}
+                            </span>
+                            <span class="form__icon-down">
+                                {{mixins.icon('down')}}
+                            </span>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="hall-1-date" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('time')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Время" name="hall-1-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__input-group">
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="hall-1-comments"></textarea>
+                </div>
+                <div class="form__button-wrapper">
+                    <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
+                </div>
+                <div class="form__parking">{{ mixins.icon('parking') }}Бесплатная парковка для гостей</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div data-modal="booking-hall-2" class="modal">
+    <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
+        <div class="modal__inner">
+            <form action="booking_hall_2_form.php" class="form form_order js-booking-hall-2 js-form" method="post">
+                <h3 class="form__title title">
+                    <span>Забронировать 2й этаж</span>
+                </h3>
+                <div class="form__input-group">
+                    <span class="form__icon">
+                        {{mixins.icon('user')}}
+                    </span>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="hall-2-name" required="required" autocomplete="off"/>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="hall-2-phone" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('people')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Количество персон" name="hall-2-number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('date')}}
+                            </span>
+                            <span class="form__icon-down">
+                                {{mixins.icon('down')}}
+                            </span>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="hall-2-date" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('time')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Время" name="hall-2-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__input-group">
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="hall-1-comments"></textarea>
+                </div>
+                <div class="form__button-wrapper">
+                    <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
+                </div>
+                <div class="form__parking">{{ mixins.icon('parking') }}Бесплатная парковка для гостей</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div data-modal="booking-veranda" class="modal">
+    <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
+        <div class="modal__inner">
+            <form action="booking_veranda_form.php" class="form form_order js-booking-veranda js-form" method="post">
+                <h3 class="form__title title">
+                    <span>Забронировать веранду</span>
+                </h3>
+                <div class="form__input-group">
+                    <span class="form__icon">
+                        {{mixins.icon('user')}}
+                    </span>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="veranda-name" required="required" autocomplete="off"/>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="veranda-phone" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('people')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Количество персон" name="veranda-number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('date')}}
+                            </span>
+                            <span class="form__icon-down">
+                                {{mixins.icon('down')}}
+                            </span>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="veranda-date" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('time')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Время" name="veranda-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__input-group">
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="veranda-comments"></textarea>
+                </div>
+                <div class="form__button-wrapper">
+                    <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
+                </div>
+                <div class="form__parking">{{ mixins.icon('parking') }}Бесплатная парковка для гостей</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div data-modal="booking-caraoke" class="modal">
+    <div class="modal__container" data-modal-container="data-modal-container">
+        <button class="modal__close" data-modal-close="data-modal-close">
+            {{mixins.icon('close')}}
+        </button>
+        <div class="modal__inner">
+            <form action="booking_karaoke_form.php" class="form form_order js-booking-caraoke js-form" method="post">
+                <h3 class="form__title title">
+                    <span>Забронировать караоке</span>
+                </h3>
+                <div class="form__input-group">
+                    <span class="form__icon">
+                        {{mixins.icon('user')}}
+                    </span>
+                    <input type="text" class="form__input" placeholder="Ваше Имя" name="caraoke-name" required="required" autocomplete="off"/>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('call-answer')}}
+                            </span>
+                            <input type="text" class="form__input js-phone-mask" placeholder="Номер телефона" name="caraoke-phone" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('people')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Количество персон" name="caraoke-number-of-people" autocomplete="off" data-inputmask="'mask': '99999999999999999'" data-inputmask-placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('date')}}
+                            </span>
+                            <span class="form__icon-down">
+                                {{mixins.icon('down')}}
+                            </span>
+                            <input type="text" class="form__input js-datepicker" placeholder="Дата" name="caraoke-date" required="required" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__input-group">
+                            <span class="form__icon">
+                                {{mixins.icon('time')}}
+                            </span>
+                            <input type="text" class="form__input" placeholder="Время" name="caraoke-time" autocomplete="off" data-inputmask-alias="datetime" data-inputmask-inputformat="HH:MM" data-inputmask-max="24" data-inputmask-placeholder="ЧЧ:ММ"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__input-group">
+                    <textarea class="form__textarea" placeholder="Ваш комментарий" name="caraoke-comments"></textarea>
+                </div>
+                <div class="form__button-wrapper">
+                    <button type="submit" class="btn btn_highlighted btn_w100 js-btn-submit" value="Receive a result of calculation">Оставить заявку</button>
+                </div>
+                <div class="form__parking">{{ mixins.icon('parking') }}Бесплатная парковка для гостей</div>
+            </form>
+        </div>
+    </div>
+</div>
+
